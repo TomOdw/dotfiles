@@ -1,0 +1,13 @@
+#Ignore everything
+/*
+
+#But not these files
+!.gitignore
+!.tmux/
+!.config/
+
+#Ignore everything in .config
+.config/*
+
+#But not these directories
+!.config/nvim/
