@@ -11,3 +11,10 @@
 #But not these directories
 !.config/nvim/
 !.config/tmux/
+
+#Ignore every Tmux Plugin
+.config/tmux/plugins/*
+
+#But not custom catppuccin and tpm
+!.config/tmux/plugins/catppuccin/
+!.config/tmux/plugins/tpm/
