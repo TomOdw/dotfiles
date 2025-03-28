@@ -3,7 +3,6 @@
 
 #But not these files
 !.gitignore
-!.tmux/
 !.config/
 
 #Ignore everything in .config
@@ -11,3 +10,4 @@
 
 #But not these directories
 !.config/nvim/
+!.config/tmux/
