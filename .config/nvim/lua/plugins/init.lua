@@ -13,20 +13,6 @@ return {
     end,
   },
 
-  -- tmux navigator
-  {
-    "christoomey/vim-tmux-navigator",
-    cmd = {
-      "TmuxNavigateLeft",
-      "TmuxNavigateDown",
-      "TmuxNavigateUp",
-      "TmuxNavigateRight",
-      "TmuxNavigatePrevious",
-      "TmuxNavigatorProcessList",
-    },
-    lazy = false,
-  },
-
   {
    "williamboman/mason.nvim",
    opts = {
