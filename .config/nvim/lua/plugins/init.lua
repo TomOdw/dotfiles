@@ -19,11 +19,11 @@ return {
     ensure_installed = {
       "lua-language-server",
       "stylua",
-      "html-lsp",
-      "css-lsp",
       "prettier",
-      "pyre",
-      "clangd"
+      "clangd",
+      "python-lsp-server",
+      "dockerfile-language-server",
+      "doctoc"
     },
    },
   },
@@ -33,7 +33,8 @@ return {
 	opts = {
 		ensure_installed = {
 			"vim", "lua", "vimdoc",
-     "html", "css", "c", "cpp"
+         "c", "cpp","python", "dockerfile",
+         "markdown_inline"
 		},
 	},
 },
