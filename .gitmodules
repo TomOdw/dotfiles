@@ -1,3 +1,6 @@
 [submodule ".config/tmux/plugins/tpm"]
 	path = .config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule ".config/tmux/plugins/projactions"]
+	path = .config/tmux/plugins/projactions
+	url = https://github.com/TomOdw/projactions.git

@@ -15,6 +15,6 @@
 #Ignore every Tmux Plugin
 .config/tmux/plugins/*
 
-#But not custom catppuccin and tpm
-!.config/tmux/plugins/catppuccin/
+#But not plugins that are not installed via tpm
 !.config/tmux/plugins/tpm/
+!.config/tmux/plugins/projactions/
