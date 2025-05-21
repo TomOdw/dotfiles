@@ -52,7 +52,7 @@ return {
 				--   mappings = {
 				--     i = { ["<c-enter>"] = "to_fuzzy_refine" },
 				--   },
-				initial_mode = "normal",
+				-- initial_mode = "normal",
 			},
 			-- pickers = {}
 			extensions = {
