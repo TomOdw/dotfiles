@@ -91,19 +91,23 @@ return {
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map(
+						"<leader>fsd",
+						require("telescope.builtin").lsp_document_symbols,
+						"[F]ind [S]ymbols in [D]ocument"
+					)
 
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
-						"<leader>ws",
+						"<leader>fsw",
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"[W]orkspace [S]ymbols"
+						"[F]ind [S]ymbols in [W]orkspace"
 					)
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
-					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+					map("<leader>r", vim.lsp.buf.rename, "[R]ename")
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
@@ -295,7 +299,7 @@ return {
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>f",
+				"<leader>F",
 				function()
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
@@ -309,7 +313,7 @@ return {
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = { c = true, cpp = true, h = true }
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					return nil
 				else

@@ -1,6 +1,6 @@
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Esc -> turn of search highlights" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
@@ -14,12 +14,17 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Move selceted visual block
-vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
 
 -- Keep visual selection after indenting
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
 -- Search for word under cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set(
+	"n",
+	"<leader>s",
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ desc = "[S]earch and replace" }
+)
